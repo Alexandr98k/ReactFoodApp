@@ -1,13 +1,12 @@
-import './App.css'
+import { Fragment } from 'react';
+import Header from './components/Layout/Header';
 
 function App() {
- 
-
   return (
-    <div className="App">
-      
-    </div>
-  )
+    <Fragment>
+      <Header />
+    </Fragment>
+  );
 }
 
-export default App
+export default App;
