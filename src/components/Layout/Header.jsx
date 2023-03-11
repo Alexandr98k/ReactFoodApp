@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, useContext } from 'react';
 
 import HeaderCartButton from './HeaderCartButton';
 
