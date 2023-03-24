@@ -9,7 +9,7 @@ const isMoreFiveChars = function (value) {
   return value.trim().length > 5;
 };
 
-const Checkout = function ({ onCancel }) {
+const Checkout = function ({ onCancel, onSubmit }) {
   const [formInputsValidity, setFormInputsValidity] = useState({
     name: true,
     street: true,
@@ -45,6 +45,13 @@ const Checkout = function ({ onCancel }) {
 
     const formIsValid =
       enteredNameIsValid && enteredStreetIsValid && enteredCityIsValid && enteredPostalCodeIsValid;
+
+    onSubmit({
+      name: enteredName,
+      street: enteredStreet,
+      postal: enteredPostalCode,
+      city: enteredCity,
+    });
   };
   return (
     <form onSubmit={confirmHandler}>
